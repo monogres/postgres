@@ -53,6 +53,11 @@ os.chdir(args.privatedir)
 # don't even need to make this conditional.
 env = {'FLEX_TMP_DIR': args.privatedir}
 
+# flex honors the M4 env variable, so if it's set in the environment
+# it should be propagated to the subprocess environment
+if "M4" in os.environ:
+    env['M4'] = os.environ["M4"]
+
 # build flex invocation
 command = [args.flex, '-o', args.output_file]
 if args.no_backup:

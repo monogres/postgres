@@ -89,4 +89,15 @@ if args.fix_warnings:
     if sp.returncode != 0:
         sys.exit(sp.returncode)
 
+# fix flex <= 2.6.4 --noline bugs (e.g. https://github.com/westes/flex/pull/704)
+import re
+
+RE_LINE_DIRECTIVE = re.compile(r'#line \d+ ".*"')
+
+with open(args.output_file) as f:
+    output_lines = f.readlines()
+
+with open(args.output_file, "w") as f:
+    f.writelines(l for l in output_lines if not RE_LINE_DIRECTIVE.match(l))
+
 sys.exit(0)

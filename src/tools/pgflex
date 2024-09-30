@@ -62,6 +62,8 @@ if "M4" in os.environ:
 command = [args.flex, '-o', args.output_file]
 if args.no_backup:
     command += ['-b']
+# suppress line directives to make the build reproducible
+command += ['--noline']
 command += args.flex_flags
 command += [args.input_file]
 

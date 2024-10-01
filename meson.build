@@ -471,6 +471,11 @@ endif
 pkg = 'postgresql'
 
 dir_prefix = get_option('prefix')
+dir_prefix_distro = get_option('prefix_distro')
+
+if dir_prefix_distro == ''
+  dir_prefix_distro = dir_prefix
+endif
 
 dir_prefix_contains_pg = (dir_prefix.contains('pgsql') or dir_prefix.contains('postgres'))
 

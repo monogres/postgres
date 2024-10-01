@@ -70,6 +70,8 @@ option('darwin_sysroot', type: 'string', value: '',
 option('rpath', type: 'boolean', value: true,
   description: 'Embed shared library search path in executables')
 
+option('prefix_distro', type: 'string', value: '',
+  description: 'Select a "distro prefix" (a path different from prefix where Postgres will be installed). Useful if the distro install path will be different from the install path at build time.')
 
 # External dependencies
 

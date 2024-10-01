@@ -43,6 +43,9 @@ config_paths_data.set_quoted('MANDIR', dir_prefix_distro / dir_man)
 
 
 var_cc = ' '.join(cc.cmd_array())
+if 'execroot/' in var_cc
+  var_cc = '<EXECROOT>/' + var_cc.split('execroot/')[1]
+endif
 var_cpp = ' '.join(cc.cmd_array() + ['-E'])
 var_cflags = ' '.join(cflags + cflags_builtin + cflags_warn + get_option('c_args'))
 if llvm.found()

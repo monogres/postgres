@@ -8,7 +8,7 @@ build] branches per PostgreSQL version.
 The mirror syncs the official PostgreSQL repository, so it has all of the tags,
 branches, etc, available upstream.
 
-In addition, it introduces the following custom `monogres/*` branches:
+In addition, it introduces the following custom [`monogres/*` branches]:
 
 - `monogres/main`: the main branch of this mirror.
 - `monogres/patches/<PG_VERSION>`: track the corresponding `REL_<PG_VERSION>`
@@ -33,6 +33,7 @@ In addition, it introduces the following custom `monogres/*` branches:
 <!-- Links -->
 
 [Monogres]: https://github.com/monogres/monogres
+[`monogres/*` branches]: https://github.com/monogres/postgres/branches/all?query=monogres
 [official PostgreSQL repository]: https://git.postgresql.org/gitweb/?p=postgresql.git
 [official PostgreSQL "Submitting a patch" wiki page]: https://wiki.postgresql.org/wiki/Submitting_a_Patch
 [reproducible build]: https://reproducible-builds.org

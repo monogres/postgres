@@ -16,8 +16,8 @@ In addition, it introduces the following custom [`monogres/*` branches]:
   able to have a reproducible build.
 
 > [!NOTE]
-> **This repo solely exists to maintain a set of patches that enable Postgres
-> reproducible builds**.
+> **This repository solely exists to maintain a set of patches that enable
+> Postgres reproducible builds**.
 >
 > The long-term goal is for these patches to be upstreamed. Once that happens,
 > this mirror will no longer be needed for future PostgreSQL versions but it

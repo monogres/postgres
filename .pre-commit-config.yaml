@@ -43,3 +43,11 @@ repos:
   hooks:
     - id: markdownlint
       args: ["--fix"]
+- repo: https://github.com/mpalmer/action-validator
+  rev: v0.6.0
+  hooks:
+    - id: action-validator
+- repo: https://github.com/rhysd/actionlint
+  rev: v1.7.7
+  hooks:
+    - id: actionlint
